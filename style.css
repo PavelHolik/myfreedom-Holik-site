@@ -6,6 +6,11 @@
 body {
   background: linear-gradient(180deg, #f4f7ff 0%, #f1f5ff 100%);
 }
+header {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
 .container {
   max-width: 1440px;
   margin: auto;
@@ -13,14 +18,16 @@ body {
 header {
   padding-top: 18px;
   padding-bottom: 19px;
+  width: 100%;
+  background-color: #fff;
 }
-div .menuleft,
-.menuright,
+div .menuright,
 .buttonstart {
   display: inline-block;
 }
 nav li {
   display: inline-block;
+  vertical-align: middle;
 }
 img .logo {
   height: 26px;
@@ -28,15 +35,22 @@ img .logo {
 }
 header .container {
   display: flex;
-
+  align-items: center;
   justify-content: space-between;
 }
-.menuleft nav {
+.menuleft {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .menuleft li {
   margin-right: 42px;
+}
+#social-media {
+  display: none;
+}
+.mobile-menu {
+  display: none;
 }
 .menuleft a {
   font-family: "Quicksand";
@@ -64,6 +78,12 @@ header .container {
   display: flex;
   justify-content: center;
 }
+#social-media {
+  display: none;
+}
+.mobile-menu {
+  display: none;
+}
 .buttonstart {
   padding: 13px 15px;
   background-color: #d2e1ff;
@@ -86,7 +106,9 @@ header .container {
   flex-direction: column;
   align-items: center;
   margin-top: 92px;
+  padding-top: 92px;
 }
+
 .main {
   display: flex;
   flex-direction: column;
@@ -97,6 +119,13 @@ header .container {
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100%;
+}
+.oneofstats {
+  position: absolute;
+  top: 38vh;
+  left: 30vh;
+  height: 97px;
+  width: 92px;
 }
 h1 {
   margin-top: 16px;
@@ -142,4 +171,169 @@ h1 {
   background-image: url(./images/clouds.svg);
   background-repeat: no-repeat;
   background-size: 100%;
+}
+.playbutton img {
+  width: 100px;
+  height: 100px;
+}
+.section2 {
+  background-color: #fff;
+}
+.brands {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 62px 0 62px 0;
+}
+.brands div {
+  margin-right: 76px;
+}
+.section3 {
+  background-color: rgba(245, 248, 255, 1);
+}
+.desktopandmobile {
+  background-image: url(./images/illustration.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-top: 170px;
+  padding-bottom: 170px;
+  background-size: 80%;
+}
+.desktopandmobiletext {
+  margin-left: 200px;
+  max-width: 415px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.desktopandmobileapp {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #3d4f9f;
+  padding-bottom: 27px;
+}
+.desktopandmobiletext h2 {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 45px;
+  color: #3d4f9f;
+  padding-bottom: 27px;
+}
+.desktopandmobiletext p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 29px;
+  letter-spacing: 0.03em;
+  color: #8d96bd;
+}
+@media (max-width: 1440px) {
+  .container {
+    max-width: 95%;
+  }
+  .main {
+    height: 100%;
+    background-image: url(./images/polyline.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+  }
+  .slide {
+    margin-top: 200px;
+  }
+  .oneofstats {
+    display: none;
+  }
+  .desktopandmobile {
+    background-image: url(./images/illustration.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .desktopandmobiletext {
+    margin-left: 0px;
+    margin: auto;
+    align-items: center;
+  }
+  .desktopandmobileapp {
+    margin-top: 27px;
+  }
+  #planandmanage {
+    margin-bottom: 1050px;
+  }
+}
+@media (max-width: 1140px) {
+  header {
+    padding-top: 0px;
+    padding-bottom: 0px;}
+    .maintext{
+      margin-top: 0px;
+    }
+  .desktopandmobile {
+    background-image: none;
+  }
+  #planandmanage {
+    margin-bottom: 20px;
+  }
+  .menuright nav {
+    display: none;
+  }
+  #social-media {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+  .brands div {
+    flex-basis: 30%;
+    margin-right: 0px;
+    text-align: center;
+  }
+  #atlassian {
+    margin-top: 30px;
+  }
+  #audi {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 690px) {
+  
+  .home,
+  .blog,
+  .features,
+  .pricing,
+  .documentation {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .burger-menu {
+    height: 40px;
+    width: 40px;
+  }
+  .menuleft li {
+    margin-right: 0px;
+  }
+  .logo {
+    margin-right: 0;
+  }
+  .brands {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0 30px 0;
+  }
+  .brands div{
+    margin-top: 30px;
+  }
 }
